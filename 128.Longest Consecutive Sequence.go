@@ -18,6 +18,7 @@ import (
 	Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
 */
 
+// time:12ms cache:3.1MB
 func longestConsecutive(nums []int) int {
 	if len(nums) <= 1 {
 		return len(nums)
@@ -42,6 +43,39 @@ func longestConsecutive(nums []int) int {
 		}
 	}
 	return int(math.Max(float64(length), float64(leng)))
+}
+
+// time:8ms cache:5MB
+func longestConsecutive2(nums []int) int {
+	if len(nums) == 0 || len(nums) == 1 {
+		return len(nums)
+	}
+	var length = 1
+	var count int
+	var onlyOne = make([]int, 0)
+	var numMap = make(map[int]int)
+	for i := 0; i < len(nums); i++ {
+		if _, exist := numMap[nums[i]]; !exist {
+			numMap[nums[i]] = 1
+			onlyOne = append(onlyOne, nums[i])
+		}
+	}
+	sort.Ints(onlyOne)
+	var num = onlyOne[0]
+	count++
+	fmt.Println(onlyOne)
+	for j := 1; j < len(onlyOne); j++ {
+		if onlyOne[j] == num+1 {
+			count++
+		} else {
+			if length < count {
+				length = count
+			}
+			count = 1
+		}
+		num = onlyOne[j]
+	}
+	return int(math.Max(float64(length), float64(count)))
 }
 
 func main() {

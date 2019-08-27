@@ -1,4 +1,4 @@
-package LeetCode
+package main
 
 func findKthLargest(nums []int, k int) int {
 	bubleSort(nums)

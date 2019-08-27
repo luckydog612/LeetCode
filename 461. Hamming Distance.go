@@ -1,4 +1,4 @@
-package LeetCode
+package main
 
 func hammingDistance(x int, y int) int {
 	var count int

@@ -1,4 +1,4 @@
-package LeetCode
+package main
 
 /**
  * Definition for singly-linked list.
@@ -7,7 +7,7 @@ package LeetCode
  *     Next *ListNode
  * }
  */
-func deleteDuplicates(head *ListNode) *ListNode {
+func deleteDuplicates2(head *ListNode) *ListNode {
 	if head == nil {
 		return head
 	}

@@ -1,13 +1,12 @@
-package LeetCode
+package main
 
-/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
+// Definition for a binary tree node.
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
 func constructMaximumBinaryTree(nums []int) *TreeNode {
 	t := &TreeNode{}
 	if len(nums) == 0 {

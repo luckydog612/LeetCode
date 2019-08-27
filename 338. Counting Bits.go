@@ -1,4 +1,4 @@
-package LeetCode
+package main
 
 func countBits(num int) []int {
 	b := make([]int, 0)

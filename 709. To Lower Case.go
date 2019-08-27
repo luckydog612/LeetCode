@@ -1,4 +1,4 @@
-package LeetCode
+package main
 
 func toLowerCase(str string) string {
 	var a []byte

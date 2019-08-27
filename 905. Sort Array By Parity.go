@@ -1,4 +1,4 @@
-package LeetCode
+package main
 
 func sortArrayByParity(A []int) []int {
 	var odd []int

@@ -1,4 +1,4 @@
-package LeetCode
+package main
 
 func search(nums []int, target int) int {
 	var start = 0
